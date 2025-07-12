@@ -22,7 +22,7 @@ A RESTful API for managing user notes with JWT authentication, built with ASP.NE
 ### 1. Clone and Navigate to Project
 
 ```bash
-cd ~/Documents/hobbie-project/techbodia/note-back-end
+cd to project
 ```
 
 ### 2. Start SQL Server Database
@@ -42,7 +42,7 @@ docker ps
 dotnet tool install --global dotnet-ef
 
 # Add to PATH if needed (for zsh users)
-export PATH="$PATH:/Users/hdtelecom/.dotnet/tools"
+export PATH="$PATH:/Users/yourusername/.dotnet/tools"
 ```
 
 ### 4. Restore Dependencies
@@ -88,10 +88,10 @@ When you restart your laptop, follow these steps:
 
 ```bash
 # 1. Navigate to project directory
-cd ~/Documents/hobbie-project/techbodia/note-back-end
+cd to backend project
 
 # 2. Start SQL Server
-docker-compose up -d
+docker compose up -d
 
 # 3. Wait 30 seconds for SQL Server to start
 sleep 30
@@ -107,7 +107,7 @@ Create a `start.sh` file for easy startup:
 ```bash
 #!/bin/bash
 echo "Starting Notes API..."
-docker-compose up -d
+docker compose up -d
 echo "Waiting for SQL Server to start..."
 sleep 30
 echo "Starting application..."
@@ -187,7 +187,7 @@ docker ps
 docker logs sqlserver
 
 # Restart SQL Server container
-docker-compose restart
+docker compose restart
 ```
 
 ### Port Conflicts
@@ -204,10 +204,10 @@ lsof -i :5288
 
 ```bash
 # Stop all containers
-docker-compose down
+docker compose down
 
 # Start fresh
-docker-compose up -d
+docker compose up -d
 sleep 30
 dotnet run
 ```
@@ -241,13 +241,13 @@ dotnet ef database update
 docker ps
 
 # Stop SQL Server
-docker-compose down
+docker compose down
 
 # View container logs
 docker logs sqlserver
 
 # Remove data volume (caution: will lose all data)
-docker-compose down -v
+docker compose down -v
 ```
 
 ---
