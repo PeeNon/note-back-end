@@ -29,7 +29,7 @@ cd ~/Documents/hobbie-project/techbodia/note-back-end
 
 ```bash
 # Start SQL Server using Docker Compose
-docker-compose up -d
+docker compose up -d
 
 # Wait for SQL Server to initialize (about 30 seconds)
 # Check if container is running
